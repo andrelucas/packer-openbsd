@@ -62,8 +62,8 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "384" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
+        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
       ],
       "virtualbox_version_file": ".vbox_version",
       "vm_name": "openbsd-5.7-amd64"
@@ -98,8 +98,8 @@
       "shutdown_command": "/sbin/halt -p",
       "vm_name": "openbsd-5.7-amd64",
       "vmx_data": {
-        "memsize": "384",
-        "numvcpus": "1",
+        "memsize": "1024",
+        "numvcpus": "2",
         "cpuid.coresPerSocket": "1"
       }
     },
@@ -132,8 +132,8 @@
       "shutdown_command": "/sbin/halt -p",
       "vm_name": "openbsd-5.7-amd64",
       "qemuargs": [
-        [ "-m", "384M" ],
-        [ "-smp", "cores=1,threads=1,sockets=1" ]
+        [ "-m", "1024M" ],
+        [ "-smp", "cores=2,threads=1,sockets=1" ]
       ]
     }
   ],
