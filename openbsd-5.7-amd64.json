@@ -7,7 +7,8 @@
     "mirror": "http://ftp.openbsd.org",
     "vagrant_ansible": "no",
     "atlas_box_name": "tmatilai/openbsd-5.7",
-    "atlas_box_version": "1.0.0"
+    "atlas_box_version": "1.0.0",
+    "disk_size": "30000"
   },
   "provisioners": [
     {
@@ -43,13 +44,12 @@
         "Since you set up a user, disable sshd(8) logins to root = no<enter>",
         "What timezone are you in = UTC<enter>",
         "Location of sets = cd<enter>",
-        "Set name(s) = -game*.tgz -x*.tgz<enter>",
         "Directory does not contain SHA256.sig. Continue without verification = yes<enter>",
         "EOF<enter>",
         "install -af install.conf && reboot<enter>"
       ],
       "boot_wait": "30s",
-      "disk_size": 10140,
+      "disk_size": "{{user `disk_size`}}",
       "guest_additions_mode": "disable",
       "guest_os_type": "OpenBSD_64",
       "iso_checksum": "3f714d249a6dc8f40c2fc2fccea8ef9987e74a2b81483175d081661c3533b59a",
@@ -80,13 +80,12 @@
         "Since you set up a user, disable sshd(8) logins to root = no<enter>",
         "What timezone are you in = UTC<enter>",
         "Location of sets = cd<enter>",
-        "Set name(s) = -game*.tgz -x*.tgz<enter>",
         "Directory does not contain SHA256.sig. Continue without verification = yes<enter>",
         "EOF<enter>",
         "install -af install.conf && reboot<enter>"
       ],
       "boot_wait": "30s",
-      "disk_size": 10140,
+      "disk_size": "{{user `disk_size`}}",
       "guest_os_type": "other-64",
       "iso_checksum": "3f714d249a6dc8f40c2fc2fccea8ef9987e74a2b81483175d081661c3533b59a",
       "iso_checksum_type": "sha256",
@@ -116,13 +115,12 @@
         "Since you set up a user, disable sshd(8) logins to root = no<enter>",
         "What timezone are you in = UTC<enter>",
         "Location of sets = cd<enter>",
-        "Set name(s) = -game*.tgz -x*.tgz<enter>",
         "Directory does not contain SHA256.sig. Continue without verification = yes<enter>",
         "EOF<enter>",
         "install -af install.conf && reboot<enter>"
       ],
       "boot_wait": "30s",
-      "disk_size": 10140,
+      "disk_size": "{{user `disk_size`}}",
       "iso_checksum": "3f714d249a6dc8f40c2fc2fccea8ef9987e74a2b81483175d081661c3533b59a",
       "iso_checksum_type": "sha256",
       "iso_url": "{{user `mirror`}}/pub/OpenBSD/5.7/amd64/install57.iso",
